@@ -15,7 +15,11 @@
   justify-content: center;
   align-items: center;
 
-    &-animation {
+    &__text {
+      color: $themeSlateOffsetPrimary;
+    }
+    
+    &__animation {
             border: 24px solid $themeSlateOffsetSecondary;
             border-top: 24px solid $themeSlateContrastPrimary;
             border-radius: 50%;

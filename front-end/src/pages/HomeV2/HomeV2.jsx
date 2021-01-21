@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import PageLoading from '../../components/PageLoading/PageLoading'
-import './Home.scss';
+import './HomeV2.scss';
 
-class Home extends React.Component {
+class HomeV2 extends React.Component {
     state = {
         imageList: [],
         loaded: false,
@@ -12,14 +12,19 @@ class Home extends React.Component {
 
     componentDidMount(){
         axios
-        .get(`${process.env.REACT_APP_API_URL}/images`, {
+        // .get(`${process.env.REACT_APP_SSTK_API_URL}/images/search`, {
+        .get(`https:/api.shutterstock.com/v2/images/search`, {
           params: {
-            query: "kittens"
+            query: "kittens",
+          },
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           }
         })
         .then((res) => {
+          console.log(process.env.REACT_APP_API_URL);
           this.setState({
-            imageList: res.data,
+            imageList: res.data.data,
             loaded: true,
           })
         })
@@ -32,7 +37,7 @@ class Home extends React.Component {
         (axios
         .get(`${process.env.REACT_APP_API_URL}/images`, {
           params: {
-            query: this.state.searchTerm,
+            query: this.state.searchTerm
           }
         })
         .then((res) => {
@@ -50,18 +55,21 @@ class Home extends React.Component {
             searchTerm: event.target.search.value
         });
         (axios
-            .get(`${process.env.REACT_APP_API_URL}/images`, {
-              params: {
-                query: event.target.search.value
-              }
-            })
-            .then((res) => {
-                console.log(res);
-              this.setState({
-                imageList: res.data,
-                loaded: true,
-              })
-            }))
+          .get(`https:/api.shutterstock.com/v2/images/search`, {
+            params: {
+              query: event.target.search.value,
+            },
+            headers: {
+              Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+            }
+        })
+        .then((res) => {
+            console.log(res);
+          this.setState({
+            imageList: res.data.data,
+            loaded: true,
+          })
+        }))
     }
 
 
@@ -92,4 +100,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home
+export default HomeV2

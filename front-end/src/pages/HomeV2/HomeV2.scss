@@ -1,0 +1,62 @@
+@import '../../styles/global';
+
+.home{
+display: flex;
+flex-direction: column;
+
+    &__title{
+        color: $themeSlateOffsetPrimary;
+        border-bottom: 4px solid $themeSlateOffsetPrimary;
+        width: 40%;
+    }
+
+    &__form{
+        align-self: flex-end;
+        position: absolute;
+        display: flex;
+
+        &-search{
+            width: 100%;
+            max-width: 240px;
+
+    
+            @include tablet-adapt{
+                top: 0;
+            }
+        }
+    }
+    
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include desktop-adapt{
+        justify-content: space-around;
+    }
+
+    &__container{
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        background-color: $themeSlateContrastSecondary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 4px 2px;
+
+        @include tablet-adapt{
+            width: fit-content;
+        }
+
+        &-thumbnail{
+            width: 100%;
+        }
+
+        &-desc{
+            width: 150px;
+            text-align: center;
+            padding: 2px;
+        }
+    }
+}

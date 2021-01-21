@@ -1,6 +1,7 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Home from '../../pages/Home/Home';
+import HomeV2 from '../../pages/HomeV2/HomeV2';
 import BottomNav from '../BottomNav/BottomNav';
 import './App.scss';
 
@@ -12,6 +13,7 @@ class App extends React.Component {
           <div className="app__window">
             <Switch>
                 <Route exact path="/" render={(routeProps) => <Home {...routeProps}/>}/>
+                <Route path="/v2" render={(routeProps) => <HomeV2 {...routeProps}/>}/>
             </Switch>
           <BottomNav/>
           </div>
