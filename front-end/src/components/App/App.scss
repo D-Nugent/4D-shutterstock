@@ -1,0 +1,20 @@
+@import '../../styles/global';
+
+.app{
+    @include padding-control;
+    height: 100vh;
+
+    &__window{
+        @include margin-control;
+        @include padding-control;
+        background-color: $themeSlateSecondary;
+        border-radius: 16px;
+        min-height: 100%;
+        height: fit-content;
+        position: relative;
+        padding-bottom: 10.56vw;
+        @include desktop-adapt{
+            padding-bottom: 10.56vw;
+        }
+    }
+}
