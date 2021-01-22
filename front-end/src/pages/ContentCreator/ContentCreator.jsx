@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import ImageSelection from '../../components/ImageSelection/ImageSelection';
+import SideIcons from '../../components/SideIcons/SideIcons';
+import BottomNav from '../../components/BottomNav/BottomNav';
+import DesignTools from '../../components/DesignTools/DesignTools';
 import './ContentCreator.scss'
 
 class ContentCreator extends React.Component {
@@ -19,7 +22,7 @@ class ContentCreator extends React.Component {
         .then((res) => {
             console.log(res);
           this.setState({
-            imageSrc: res.data.assets.preview_1000.url,
+            imageSrc: res.data.assets.preview.url,
             imageSelected: true,
           })
           console.log(this.state);
@@ -38,11 +41,12 @@ class ContentCreator extends React.Component {
         }
         return (
             <>
-            <div className="creator__nav">NavBar</div>
             <div className="creator">
+            <SideIcons/>
             <ImageSelection applyImage={this.applyImage}/>
-            {this.state.imageSelected === true && <div className="creator__applied-image" style={styleTest}draggable="true" onDrop={(event)=>{this.dropItem(event)}}></div>}
-            <div className="creator__tools"></div>
+            {this.state.imageSelected === true && <div className="creator__applied-image" style={styleTest}></div>}
+            <DesignTools/>
+            <BottomNav/>
             </div>
             </>
         )
