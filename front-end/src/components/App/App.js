@@ -2,7 +2,7 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Home from '../../pages/Home/Home';
 import HomeV2 from '../../pages/HomeV2/HomeV2';
-import BottomNav from '../BottomNav/BottomNav';
+import BottomNav from '../BottomNavAlt/BottomNavAlt';
 import ContentCreator from '../../pages/ContentCreator/ContentCreator'
 import './App.scss';
 

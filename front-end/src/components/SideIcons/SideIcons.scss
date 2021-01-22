@@ -1,0 +1,33 @@
+@import '../../styles/global';
+
+.action{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 24px;
+
+    &__container{
+        width: 48px;
+        height: 48px;
+        background-color: #dcdcdc;
+        border-radius: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        & > img {
+            height: 24px;
+            width: 24px;
+        }
+
+        &-icon {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+    }
+}
