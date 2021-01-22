@@ -1,0 +1,82 @@
+@import '../../styles/global';
+
+.image-container{
+    background-color: #FFF;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    height: 60vh;
+    margin-left: 24px;
+    padding: 16px;
+    position: relative;
+
+    &.--hidden{
+        width: 40px;
+    }
+
+    &__close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        height: 24px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__heading{
+        padding-bottom: 12px;
+        border-bottom: 2px solid #f3f2f1;
+        font-size: 1.125rem;
+    }
+
+    &__search{
+        display: flex;
+        flex-direction: column;
+
+        &-field{
+            border-radius: 4px;
+            border: 2px solid #f3f2f1;
+            height: 32px;
+            width: 100%;
+        }
+
+        &-submit{
+            border-radius: 4px;
+            align-self: flex-end;
+            width: 100%;
+            margin: 8px 0;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__descriptor{
+        text-align: center;
+        font-size: .8125rem;
+        font-family: "Raleway";
+    }
+
+    &__content{
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: scroll;
+
+        &-thumbnail{
+            height: 88px;
+            width: 88px;
+            background-color: cadetblue;
+            margin: 8px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
