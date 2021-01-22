@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import addIcon from '../../assets/icons/add-24px.svg';
+import Capture from '../../assets/icons/Capture.JPG';
 import './DesignTools.scss';
 
 export class DesignTools extends Component {
@@ -7,8 +8,7 @@ export class DesignTools extends Component {
         return (
             <div className="design-tools">
                 <div className="design-tools__section">
-                    <h4 className="design-tools__section-title">Fill</h4>
-                    <img src={addIcon} alt="Add Icon" className="design-tools__section-icon"/>
+                    <img src={Capture} alt="Design Tools" className="design-tools__section-icon"/>
                 </div>
                 <div className="design-tools__section">
                     <h4 className="design-tools__section-title">Stroke</h4>
