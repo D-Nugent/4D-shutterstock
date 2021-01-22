@@ -1,0 +1,19 @@
+@import '../../styles/global';
+
+.creator{
+    background-color: #f3f2f1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__applied-image{
+        height: 30vw;
+        width: 30vw;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-left: 11vw;
+    }
+}

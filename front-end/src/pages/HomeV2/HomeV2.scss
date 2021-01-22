@@ -1,8 +1,27 @@
 @import '../../styles/global';
 
+@keyframes fade-test{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes move-me{
+    0%{transform: translateX(0)}
+    100%{transform: translateX(80px)}
+}
+
+.fade {
+    animation: fade-test 2s linear forwards
+}
+.mover{
+        animation: move-me 2s ease-in;
+    }
+
+
 .home{
 display: flex;
 flex-direction: column;
+
 
     &__title{
         color: $themeSlateOffsetPrimary;
