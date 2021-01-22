@@ -64,7 +64,7 @@ class HomeV2 extends React.Component {
             }
         })
         .then((res) => {
-            console.log(res);
+          console.log(res);
           this.setState({
             imageList: res.data.data,
             loaded: true,
@@ -81,6 +81,7 @@ class HomeV2 extends React.Component {
         } else {
             return (
                 <div className="home">
+                    <h1 className="title"><span className="fade">Sh</span><span className="mover">u</span><span className="fade">tter</span>Stock</h1>
                     <h1 className="home__title">HOME - Search Images</h1>
                     <form action="" className="home__form" onSubmit={(event)=>this.searchImages(event)}>
                         <input type="text" className="home__form-search" id="search"/>

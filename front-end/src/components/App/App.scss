@@ -1,8 +1,8 @@
 @import '../../styles/global';
 
 .app{
-    @include padding-control;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
 
     &__window{
         @include margin-control;

@@ -1,0 +1,28 @@
+@import '../../styles/global';
+
+.design-tools{
+    width: 240px;
+    background-color: #FFF;
+    border-radius: 8px;
+    height: 80vh;
+    position: absolute;
+    top: 6vh;
+    right: 0;
+
+    &__section{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+        border-bottom: 2px solid #f3f2f1;
+
+        &:nth-of-type(1){
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: #dcdcdc;
+        }
+    }
+}
