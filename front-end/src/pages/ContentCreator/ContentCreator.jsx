@@ -63,6 +63,7 @@ class ContentCreator extends React.Component {
             <>
             <div className="creator">
             <SideIcons/>
+
             <ImageSelection applyImage={this.applyImage} applyUpload={this.applyUpload}/>
             {this.state.uploadSelected === true && <img className="creator__applied-upload" src={this.state.uploadUrl}></img>}
             {this.state.uploadSelected === true && <img src={CloseIcon} alt="" className="creator__close" onClick={()=>{this.setState({uploadSelected:false})}}/>}
@@ -70,6 +71,7 @@ class ContentCreator extends React.Component {
             {this.state.imageSelected === true && <img src={CloseIcon} alt="" className="creator__close" onClick={()=>{this.setState({imageSelected:false})}}/>}
             {this.state.templateLoaded === true && <img className="creator__applied-template" src={userPersona}></img>}
             <TemplateModal loadTemplate={this.loadTemplate}/>
+
             <DesignTools/>
             <BottomNav/>
             </div>

@@ -5,12 +5,14 @@ import HomeV2 from '../../pages/HomeV2/HomeV2';
 import BottomNav from '../BottomNavAlt/BottomNavAlt';
 import ContentCreator from '../../pages/ContentCreator/ContentCreator'
 import './App.scss';
+import NavBar from "../NavBar/NavBar";
 
 class App extends React.Component {
-
   render() {
     return (
       <div className="app">
+          <NavBar></NavBar>
+     
             <Switch>
             <Route exact path="/">
               <Redirect to="/contentCreator" />
