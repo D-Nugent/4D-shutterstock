@@ -12,7 +12,7 @@
     position: relative;
 
     &.--hidden{
-        width: 40px;
+        display: none;
     }
 
     &__close{
@@ -71,11 +71,38 @@
         &-thumbnail{
             height: 88px;
             width: 88px;
-            background-color: cadetblue;
+            background-color: #f3f2f1;
             margin: 8px;
 
             &:hover{
                 cursor: pointer;
+            }
+        }
+    }
+
+    &__upload{        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-message{
+            font-family: "Raleway";
+            font-size: .75rem;
+        }
+        &-button{
+            display: none;
+
+            &-prompt{
+                font-family: "Raleway";
+                font-size: .75rem;
+                border: 2px solid #262626;
+                background-color: #f3f2f1;
+                border-radius: 4px;
+                padding: 4px;
+                text-align: center;
+
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
     }
