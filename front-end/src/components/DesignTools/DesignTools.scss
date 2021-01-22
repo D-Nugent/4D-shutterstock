@@ -15,6 +15,11 @@
         padding: 0 16px;
         border-bottom: 2px solid #f3f2f1;
 
+        &-title{
+            color: grey;
+            font-size: small;
+        }
+
         &:nth-of-type(1){
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
