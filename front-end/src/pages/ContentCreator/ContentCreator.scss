@@ -1,89 +1,78 @@
 @import "../../styles/global";
 
-@keyframes fade-test {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+@keyframes fade-test{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
-@keyframes move-me {
-  from {
-    transform: translate(0px, 0px);
-  }
-  to {
-    transform: translate(-26px, 0px);
-  }
+@keyframes move-me{
+    from {transform: translate(0px,0px);}
+    to {transform: translate(-26px, 0px);}
 }
 
-@keyframes color-change {
-  from {
-    color: black;
-  }
-  to {
-    color: red;
-    font-weight: 600;
-  }
+@keyframes color-change{
+    from {color: black;}
+    to {color: red; font-weight: 600;}
 }
 
 .fade {
-  animation: fade-test 2s linear forwards;
-  font-family: "Raleway";
-  font-size: 1.125rem;
+    animation: fade-test 2s linear forwards;
+    font-family: "Raleway";
+    font-size: 1.125rem;
 }
 .mover {
-  animation: move-me 1s linear forwards 2s;
-  display: relative;
-  font-family: "Raleway";
-  font-size: 1.125rem;
+    animation: move-me 1s linear forwards 2s;
+    display: relative;
+    font-family: "Raleway";
+    font-size: 1.125rem;
+
 }
 .u {
-  font-family: "Raleway";
-  animation: color-change 1s ease-in forwards 3s;
-  font-size: 1.125rem;
+    font-family: "Raleway";
+    animation: color-change 1s ease-in forwards 3s;
+    font-size: 1.125rem;
+
 }
 
-.creator {
-  background-color: #f3f2f1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  &__applied {
-    &-image {
-      height: 6.8vw;
-      width: 8vw;
-      position: absolute;
-      top: 300px;
-      left: 490px;
-      overflow: hidden;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    }
-
-    &-upload {
-      height: 6.6vw;
-      width: 6.4vw;
-      position: absolute;
-      top: 300px;
-      left: 500px;
-    }
-
-    &-template {
-      margin-left: 11vw;
-    }
-  }
-
-  &__close {
+.creator{
+    background-color: #f3f2f1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
     position: relative;
-    bottom: 12vw;
-    border: 2px solid #dcdcdc;
-    border-radius: 50%;
+    &__applied{
 
-    &:hover {
-      cursor: pointer;
+        &-image{
+            height: 6.8vw;
+            width: 8vw;
+            position: absolute;
+            top: 300px;
+            left: 490px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    
+        &-upload{
+            height: 6.6vw;
+            width: 6.4vw;
+            position: absolute;
+            top: 300px;
+            left: 500px;
+        }
+    
+        &-template{
+            margin-left: 11vw
+        }
     }
-  }
-}
+
+    &__close{
+        position: relative;
+        bottom: 12vw;
+        border: 2px solid #dcdcdc;
+        border-radius: 50%;
+
+        &:hover{
+            cursor: pointer;
+        }
+}}
