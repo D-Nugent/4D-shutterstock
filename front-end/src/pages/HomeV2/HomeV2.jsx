@@ -75,6 +75,7 @@ class HomeV2 extends React.Component {
 
 
     render() {
+      // <span className="fade">Sh</span><span className="u">u</span><span className="fade">tter</span><span className="mover">Stock</span>
         console.log(this.state);
         if (this.state.loaded === false) {
             return <PageLoading/>

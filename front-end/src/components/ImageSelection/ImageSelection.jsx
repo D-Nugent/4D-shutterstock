@@ -39,6 +39,18 @@ export class ImageSelection extends Component {
         console.log(event.target.getAttribute('data-id'));
     }
 
+    uploadSelector(event){
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+            this.props.applyUpload(reader.result)
+        }, false)
+
+        if (file) {
+            reader.readAsDataURL(file)
+        }
+    }
+
     hideImages = () => {
         this.setState({
             imageSearchVis: false,
@@ -59,6 +71,11 @@ export class ImageSelection extends Component {
                     {this.state.imageList.map(content => (
                         <img className="image-container__content-thumbnail" key={content.id} data-id={content.id} src={content.assets.large_thumb.url} alt={content.description} onClick={(event)=> {this.imageSelector(event)}}></img>
                             ))}
+                </div>
+                <div className="image-container__upload">
+                    <p className="image-container__upload-message">Want to use your own image?</p>
+                    <input className="image-container__upload-button" type="file" id="files" accept="image/*" onChange={(event)=> {this.uploadSelector(event)}}/>
+                    <label className="image-container__upload-button-prompt" htmlFor="files">Upload Your Image</label>
                 </div>
             </div>
         )

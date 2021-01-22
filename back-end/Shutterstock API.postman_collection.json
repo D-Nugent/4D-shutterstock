@@ -1,0 +1,2961 @@
+{
+	"info": {
+		"_postman_id": "a765f971-08a7-4e80-8a02-0f771956eb99",
+		"name": "Shutterstock API",
+		"description": "Public APIv2 Documentation available at http://api-reference.shutterstock.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/search",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"search"
+									],
+									"query": [
+										{
+											"key": "added_date",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "added_date_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "added_date_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "color",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "contributor",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "height_from",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "height_to",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "image_type",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "language",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "model",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "orientation",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_model_released",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_age",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_ethnicity",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_gender",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_number",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "query",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "safe",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "spellcheck_query",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "width_from",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "width_to",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/categories",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Similar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/:id/similar",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										":id",
+										"similar"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Details",
+					"item": [
+						{
+							"name": "Get details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/:ids",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										":ids"
+									],
+									"query": [
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "ids",
+											"value": "588132419"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images?id=123&view=full",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "123"
+										},
+										{
+											"key": "view",
+											"value": "full"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Licensing",
+					"item": [
+						{
+							"name": "License",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"images\": [\n\t\t{\n\t\t\t\"image_id\": \"123\",\n\t\t\t\"subscription_id\": \"s34829324\"\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/images/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "subscription_id",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "format",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "search_id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List licenses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "image_id",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Redownload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"size\": \"small\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/images/licenses/:id/downloads",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"licenses",
+										":id",
+										"downloads"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Custom Collections",
+					"item": [
+						{
+							"name": "Create Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/images/collections",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Collections",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/images/collections",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Collection",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										":id"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "share_code",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rename Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/images/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Collection",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/images/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add items",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": \"\"\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/images/collections/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										":id",
+										"items"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/collections/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "share_code",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/collections/:id/items?item_id=123",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "item_id",
+											"value": "123"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Featured Collections",
+					"item": [
+						{
+							"name": "List collections",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/collections/featured",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										"featured"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "asset_hint",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/collections/featured/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										"featured",
+										":id"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "asset_hint",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/images/collections/featured/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"images",
+										"collections",
+										"featured",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/search",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"search"
+									],
+									"query": [
+										{
+											"key": "added_date",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "added_date_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "added_date_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "aspect_ratio",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "contributor",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration_from",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration_to",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fps_from",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fps_to",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "language",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "model",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_age",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_ethnicity",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_gender",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_number",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "people_model_released",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "query",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resolution",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "safe",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Details",
+					"item": [
+						{
+							"name": "Get details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										":id"
+									],
+									"query": [
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos?id=123&view=full",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "123"
+										},
+										{
+											"key": "view",
+											"value": "full"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/categories",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Similar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/:id/similar",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										":id",
+										"similar"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Licensing",
+					"item": [
+						{
+							"name": "License",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"videos\": [\n\t\t{\n\t\t\t\"video_id\": \"123\",\n\t\t\t\"size\": \"hd\",\n\t\t\t\"subscription_id\": \"s881\",\n\t\t\t\"price\": 10,\n\t\t\t\"metadata\": {\n\t\t\t\t\"purchase_order\": \"123\",\n\t\t\t\t\"client\": \"\",\n\t\t\t\t\"job\": \"\",\n\t\t\t\t\"other\": \"\"\n\t\t\t}\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/videos/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "search_id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Licenses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "video_id",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Redownload",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/licenses/:id/downloads",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"licenses",
+										":id",
+										"downloads"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Custom Collections",
+					"item": [
+						{
+							"name": "Create Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/videos/collections",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Collections",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/videos/collections",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Collection",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections",
+										":id"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "share_code",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rename Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/videos/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Collection",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/videos/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add items",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": \"\"\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/videos/collections/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections",
+										":id",
+										"items"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/collections/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "share_code",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/videos/collections/:id/items?item_id=123",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"videos",
+										"collections",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "item_id",
+											"value": "123"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Audio",
+			"item": [
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/search",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"search"
+									],
+									"query": [
+										{
+											"key": "artists",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "bpm_from",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "bpm_to",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration_from",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration_to",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "genre",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "is_instrumental",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "instruments",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "moods",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "query",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort_order",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "vocal_description",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Genres",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/genres",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Instruments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/instruments",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"instruments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Moods",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/moods",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"moods"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Details",
+					"item": [
+						{
+							"name": "Get details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										":id"
+									],
+									"query": [
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio?id=123&view=full",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "123"
+										},
+										{
+											"key": "view",
+											"value": "full"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Licensing",
+					"item": [
+						{
+							"name": "License",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"audio\": [\n\t\t{\n\t\t\t\"audio_id\": \"462790\",\n\t\t\t\"license\": \"audio_standard\",\n\t\t\t\"metadata\": {\n\t\t\t\t\"purchase_order\": \"123\",\n\t\t\t\t\"client\": \"\",\n\t\t\t\t\"job\": \"\",\n\t\t\t\t\"other\": \"\"\n\t\t\t}\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/audio/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "search_id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Licenses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "audio_id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Redownload",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/licenses/:id/downloads",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"licenses",
+										":id",
+										"downloads"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Custom Collections",
+					"item": [
+						{
+							"name": "Create Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/audio/collections",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Collections",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/audio/collections",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Collection",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections",
+										":id"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "share_code",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rename Collection",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/audio/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Collection",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/audio/collections/:id",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add items",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": \"\"\n\t\t}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/audio/collections/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections",
+										":id",
+										"items"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/collections/:id/items",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "share_code",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/audio/collections/:id/items?item_id=123",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"audio",
+										"collections",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "item_id",
+											"value": "123"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Editorial",
+			"item": [
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/editorial/search?country=USA",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"editorial",
+										"search"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "country",
+											"value": "USA"
+										},
+										{
+											"key": "supplier_code",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "date_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "date_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Details",
+					"item": [
+						{
+							"name": "Get details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/editorial/:id?id=123&country=USA",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"editorial",
+										":id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "123"
+										},
+										{
+											"key": "country",
+											"value": "USA"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Licensing",
+					"item": [
+						{
+							"name": "License",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"editorial\": [\n\t\t{\n\t\t\t\"editorial_id\": \"123\",\n\t\t\t\"license\": \"premier_editorial_comp\",\n\t\t\t\"metadata\": {\n\t\t\t\t\"purchase_order\": \"123\",\n\t\t\t\t\"client\": \"\",\n\t\t\t\t\"job\": \"\",\n\t\t\t\t\"other\": \"\"\n\t\t\t}\n\t\t}\n\t],\n\t\"country\": \"USA\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/editorial/licenses",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"editorial",
+										"licenses"
+									],
+									"query": [
+										{
+											"key": "license",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "search_id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Livefeeds",
+					"item": [
+						{
+							"name": "List Livefeeds",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/editorial/livefeeds?country=USA",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"editorial",
+										"livefeeds"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "USA"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Livefeed",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/editorial/livefeeds/:id?country=USA",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"editorial",
+										"livefeeds",
+										":id"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "USA"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/editorial/livefeeds/:id/items?country=USA",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"editorial",
+										"livefeeds",
+										":id",
+										"items"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "USA"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Computer Vision",
+			"item": [
+				{
+					"name": "Upload",
+					"item": [
+						{
+							"name": "Upload image",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"base64_image\": \"123\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/cv/images",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"cv",
+										"images"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Similar",
+					"item": [
+						{
+							"name": "List similar images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/cv/similar/images",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"cv",
+										"similar",
+										"images"
+									],
+									"query": [
+										{
+											"key": "asset_id",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "language",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List similar videos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/cv/similar/videos",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"cv",
+										"similar",
+										"videos"
+									],
+									"query": [
+										{
+											"key": "asset_id",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "language",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "view",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Keywords",
+					"item": [
+						{
+							"name": "List suggested keywords",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/cv/keywords",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"cv",
+										"keywords"
+									],
+									"query": [
+										{
+											"key": "asset_id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contributors",
+			"item": [
+				{
+					"name": "List contributors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/contributors?id=123",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"contributors"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/contributors/:contributor_id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"contributors",
+								":contributor_id"
+							],
+							"variable": [
+								{
+									"key": "contributor_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List collections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/contributors/:contributor_id/collections",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"contributors",
+								":contributor_id",
+								"collections"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "contributor_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get collection details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/contributors/:contributor_id/collections/:id",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"contributors",
+								":contributor_id",
+								"collections",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "contributor_id",
+									"value": ""
+								},
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get collection items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/contributors/:contributor_id/collections/:id/items",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"contributors",
+								":contributor_id",
+								"collections",
+								":id",
+								"items"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "contributor_id",
+									"value": ""
+								},
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/user",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get access token defaults",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/user/access_token",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"access_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/user/subscriptions",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Echo text",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/test?text=hello",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"test"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "hello"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate input",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/test/validate?id=123",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"test",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "tag",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OAuth",
+			"item": [
+				{
+					"name": "Authorize application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/oauth/authorize?client_id=&realm=customer&redirect_uri=&response_type=code&scope=user.view user.edit collections.view collections.edit licenses.view licenses.create earnings.view media.upload media.submit media.edit purchases.view reseller.view reseller.purchase&state=",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"oauth",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": ""
+								},
+								{
+									"key": "realm",
+									"value": "customer"
+								},
+								{
+									"key": "redirect_uri",
+									"value": ""
+								},
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "scope",
+									"value": "user.view user.edit collections.view collections.edit licenses.view licenses.create earnings.view media.upload media.submit media.edit purchases.view reseller.view reseller.purchase"
+								},
+								{
+									"key": "state",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get access token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "realm",
+									"value": "customer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/oauth/access_token",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"oauth",
+								"access_token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "https://api.shutterstock.com/v2",
+			"type": "string"
+		}
+	]
+}

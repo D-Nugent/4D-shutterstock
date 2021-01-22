@@ -1,0 +1,64 @@
+@import '../../styles/global';
+
+.templates{
+    background-color: #FFF;
+    height: 65vh;
+    width: 40vw;
+    padding: 16px;
+    border-radius: 8px;
+    margin-left: 10vw;
+    position: relative;
+
+    &.--hidden{
+        display: none;
+    }
+
+    &__close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__container{
+        &-search{
+            border-radius: 4px;
+            border: 2px solid #f3f2f1;
+            height: 32px;
+            width: 100%;
+        }
+        &-header{
+            border-bottom: 2px solid #f3f2f1;
+            padding-bottom: 8px;
+        }
+        &-load{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start
+        }
+        &-element{
+            margin-right: 5px;
+
+            &-preview{
+                border: 2px solid #f3f2f1;
+                height: 12vw;
+                width: 12vw;
+                margin-top: 16px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            &-title{
+                margin: 4px;
+                font-size: .75rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

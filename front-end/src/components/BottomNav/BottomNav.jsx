@@ -9,11 +9,11 @@ function BottomNav() {
     return (
         <div className="bottom-nav">
             <div className="bottom-nav__container">
-                <button className="bottom-nav__container-pages"><img classname="bottom-nav__container-pages-icon" src={addPageIcon} alt="add page icon"/>Pages</button>
+                <button className="bottom-nav__container-pages"><img className="bottom-nav__container-pages-icon" src={addPageIcon} alt="add page icon"/>Pages</button>
             </div>
             <div className="bottom-nav__container">
                 <div className="bottom-nav__container-perspective">
-                <p className="bottom-nav__container-perspective-ruler">Ruler<img classname="bottom-nav__container-perspective-ruler-icon" src={toggleIcon} alt="toggle icon"></img></p>
+                <p className="bottom-nav__container-perspective-ruler">Ruler<img className="bottom-nav__container-perspective-ruler-icon" src={toggleIcon} alt="toggle icon"></img></p>
             </div>
             <div className="bottom-nav__container-perspective">
                     <img src={zoomOutIcon} alt="Zoom out icon" className="bottom-nav__container-perspective-icon"/>
